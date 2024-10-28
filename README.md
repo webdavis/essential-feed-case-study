@@ -111,7 +111,7 @@ ______________________________________________________________________
 
 ## Flowchart
 
-![Feed Loading Feature](feed_flowchart.png)
+<img src="feed_flowchart.png" alt="Feed Loading Feature" width="400" height="530">
 
 ## Model Specs
 
