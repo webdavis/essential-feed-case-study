@@ -25,22 +25,9 @@
 		DCF0F5C92CD011FF005C0F3F /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DCF0F5D12CD011FF005C0F3F /* Exceptions for "EssentialFeed" folder in "EssentialFeed" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			publicHeaders = (
-				EssentialFeed.h,
-			);
-			target = DCF0F5C02CD011FE005C0F3F /* EssentialFeed */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DCF0F5C32CD011FE005C0F3F /* EssentialFeed */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				DCF0F5D12CD011FF005C0F3F /* Exceptions for "EssentialFeed" folder in "EssentialFeed" target */,
-			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
 		};
