@@ -55,8 +55,8 @@ Given the customer doesn't have connectivity
 
 #### Primary course (happy path):
 
-1. Execute "Load Feed Items" command with above data.
-1. System downloads data from the URL.
+1. [x] Execute "Load Feed Items" command with above data.
+1. [x] System downloads data from the URL.
 1. System validates downloaded data.
 1. System creates feed items from valid data.
 1. System delivers feed items.
