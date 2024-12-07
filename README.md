@@ -63,11 +63,11 @@ Given the customer doesn't have connectivity
 
 #### Invalid data – error course (sad path):
 
-1. System delivers error.
+1. [x] System delivers error.
 
 #### No connectivity – error course (sad path):
 
-1. System delivers error.
+1. [x] System delivers error.
 
 ______________________________________________________________________
 
