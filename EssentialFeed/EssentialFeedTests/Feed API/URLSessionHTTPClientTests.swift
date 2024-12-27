@@ -79,7 +79,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     XCTAssertNotNil(resultErrorFor(data: anyData(), response: nonHTTPURLResponse(), error: nil))
   }
   
-  func test_getFromURL_suceedsOnHTTPURLResponseWithData() {
+  func test_getFromURL_succeedsOnHTTPURLResponseWithData() {
     let data = anyData()
     let response = anyHTTPURLResponse()
     URLProtocolStub.stub(data: data, response: response, error: nil)
@@ -101,7 +101,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     wait(for: [exp], timeout: 1.0)
   }
   
-  func test_getFromURL_suceedsWithEmptyDataOnHTTPURLResponseWithNilData() {
+  func test_getFromURL_succeedsWithEmptyDataOnHTTPURLResponseWithNilData() {
     let response = anyHTTPURLResponse()
     URLProtocolStub.stub(data: nil, response: response, error: nil)
     
