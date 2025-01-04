@@ -1,6 +1,6 @@
 # essential-feed-case-study
 
-![Build Status](https://github.com/webdavis/essential-feed-case-study/actions/workflows/CI.yml/badge.svg)
+[![CI](https://github.com/webdavis/essential-feed-case-study/actions/workflows/CI.yml/badge.svg)](https://github.com/webdavis/essential-feed-case-study/actions/workflows/CI.yml)
 
 A case study of a feed-based iOS app.
 
