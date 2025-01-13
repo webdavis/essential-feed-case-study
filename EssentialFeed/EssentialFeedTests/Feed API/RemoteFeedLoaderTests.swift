@@ -132,8 +132,10 @@ class RemoteFeedLoaderTests: XCTestCase {
       "description": description,
       "location": location,
       "image": imageURL.absoluteString
-    ].reduce(into: [String: Any]()) { (acc, e) in
-      if let value = e.value { acc[e.key] = value }
+    ].reduce(into: [String: Any]()) { (dictionary, element) in
+      if let value = element.value {
+        dictionary[element.key] = value
+      }
     }
     
     return (item, json)
