@@ -30,6 +30,7 @@ class URLSessionHTTPClientTests: XCTestCase {
       exp.fulfill()
     }
     
+    // If we invoke get with a URL then we expect a request to be executed with the correct url and httpMethod.
     makeSUT().get(from: url) { _ in }
     
     wait(for: [exp], timeout: 1.0)
