@@ -66,18 +66,18 @@ Given the customer doesn't have connectivity
 
 1. [x] Execute "Load Feed Items" command with above data.
 1. [x] System passes message in order to download data from the URL.
-1. System downloads data from the URL.
-1. System validates downloaded data.
-1. System creates feed items from valid data.
-1. System delivers feed items.
+1. [x] System downloads data from the URL.
+1. [x] System validates downloaded data.
+1. [x] System creates feed items from valid data.
+1. [x] System delivers feed items.
 
 #### Invalid data – error course (sad path):
 
-1. System delivers invalid data error.
+1. [x] System delivers invalid data error.
 
 #### No connectivity – error course (sad path):
 
-1. System delivers connectivity error.
+1. [x] System delivers connectivity error.
 
 ______________________________________________________________________
 
