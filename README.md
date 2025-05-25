@@ -38,8 +38,15 @@ So I can always enjoy images of my friends
 ```
 Given the customer doesn't have connectivity
   And there’s a cached version of the feed
+  And the cache is less than seven days old
  When the customer requests to see the feed
  Then the app should display the latest saved feed
+
+Given the customer doesn't have connectivity
+  And there’s a cached version of the feed
+  And the cache is seven days old or more
+ When the customer requests to see the feed
+ Then the app should display an error message
 
 Given the customer doesn't have connectivity
   And the cache is empty
@@ -49,7 +56,7 @@ Given the customer doesn't have connectivity
 
 ## Use Cases
 
-### Load Feed Use Case
+### Load Feed From Remote Use Case
 
 #### Data:
 
@@ -66,30 +73,31 @@ Given the customer doesn't have connectivity
 
 #### Invalid data – error course (sad path):
 
-1. System delivers error.
+1. System delivers invalid data error.
 
 #### No connectivity – error course (sad path):
 
-1. System delivers error.
+1. System delivers connectivity error.
 
 ______________________________________________________________________
 
-### Load Feed Fallback (Cache) Use Case
-
-#### Data:
-
-- Max age
+### Load Feed From Cache Use Case
 
 #### Primary course:
 
-1. Execute "Retrieve Feed Items" command with above data.
+1. Execute "Load Feed Items" command with above data.
 1. System fetches feed data from cache.
-1. System validates cache age.
+1. System validates cache is less than seven days old.
 1. System creates feed items from cached data.
 1. System delivers feed items.
 
+#### Error course (sad path):
+
+1. System delivers error.
+
 #### Expired cache course (sad path):
 
+1. System deletes cache.
 1. System delivers no feed items.
 
 #### Empty cache course (sad path):
@@ -98,7 +106,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-### Save Feed Items Use Case
+### Cache Feed Use Case
 
 #### Data:
 
@@ -107,10 +115,19 @@ ______________________________________________________________________
 #### Primary course (happy path):
 
 1. Execute "Save Feed Items" command with above data.
+1. System deletes old cache data.
 1. System encodes feed items.
 1. System timestamps the new cache.
-1. System replaces the cache with new data.
+1. System saves new cache data.
 1. System delivers success message.
+
+#### Deleting error course (sad path):
+
+1. System delivers error.
+
+#### Saving error course (sad path):
+
+1. System delivers error.
 
 ## Flowchart
 
