@@ -67,7 +67,7 @@ class CacheFeedUseCaseTests: XCTestCase {
   func test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion() {
     let timestamp = Date()
     let items = [uniqueItem(), uniqueItem()]
-    let (sut, store) = makeSUT(currentDate: { timestamp })
+    let (sut, store) = makeSUT(currentDate: { return timestamp })
     
     sut.save(items) { _ in }
     store.completeDeletionSuccessfully()
